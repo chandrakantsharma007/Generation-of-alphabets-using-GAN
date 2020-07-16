@@ -44,8 +44,10 @@ Note: This method of training a GAN is taken from game theory called the minimax
 # Parts of training GAN
 So broadly a training phase has two main subparts and they are done sequentially
 ![alt text](https://cdn.analyticsvidhya.com/wp-content/uploads/2017/06/14180916/g22.png)
+
 Pass 1: Train discriminator and freeze generator (freezing means setting training as false. The network does only forward pass and no backpropagation is applied)
 ![alt text](https://cdn.analyticsvidhya.com/wp-content/uploads/2017/06/14204626/s21.png)
+
 Pass 2: Train generator and freeze discriminator
 Steps to train a GAN
 Step 1: Define the problem. Do you want to generate fake images or fake text. Here you should completely define the problem and collect data for it.
