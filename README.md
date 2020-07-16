@@ -1,6 +1,6 @@
 # Generation-of-alphabets-using-GAN
 
-So, what we are going to do is we are generating alphabets using GAN(Generaive Adversarial Network) in Tensorfolw 2.0 by using emnist(Alphabets dataset) which is available in the extra keras dataset i show you how to download it in my notebook.
+So, what we are going to do is we are generating alphabets using GAN(Generaive Adversarial Network) in Tensorfolw 2.0 by using emnist(Alphabets dataset) which is available in the extra keras dataset i have shown you how to download it in my notebook.
 To understand the code in a better way kindly visit to mnist-GAN repository.
 # What is GAN?
 
