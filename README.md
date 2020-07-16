@@ -33,7 +33,7 @@ D(x) -> Discriminator Network
 
 Now the training of GAN is done (as we saw above) as a fight between generator and discriminator. This can be represented mathematically as
 
-
+![alt text](https://cdn.analyticsvidhya.com/wp-content/uploads/2017/06/14180916/g22.png)
 
 In our function V(D, G) the first term is entropy that the data from real distribution (pdata(x)) passes through the discriminator (aka best case scenario). The discriminator tries to maximize this to 1. The second term is entropy that the data from random input (p(z)) passes through the generator, which then generates a fake sample which is then passed through the discriminator to identify the fakeness (aka worst case scenario). In this term, discriminator tries to maximize it to 0 (i.e. the log probability that the data from generated is fake is equal to 0). So overall, the discriminator is trying to maximize our function V.
 
@@ -41,10 +41,11 @@ On the other hand, the task of generator is exactly opposite, i.e. it tries to m
 
 Note: This method of training a GAN is taken from game theory called the minimax game.
 
-Parts of training GAN
+# Parts of training GAN
 So broadly a training phase has two main subparts and they are done sequentially
-
+![alt text](https://cdn.analyticsvidhya.com/wp-content/uploads/2017/06/14180916/g22.png)
 Pass 1: Train discriminator and freeze generator (freezing means setting training as false. The network does only forward pass and no backpropagation is applied)
+![alt text](https://cdn.analyticsvidhya.com/wp-content/uploads/2017/06/14204626/s21.png)
 Pass 2: Train generator and freeze discriminator
 Steps to train a GAN
 Step 1: Define the problem. Do you want to generate fake images or fake text. Here you should completely define the problem and collect data for it.
@@ -61,6 +62,3 @@ Step 6: Repeat step 3 to step 5 for a few epochs.
 
 Step 7: Check if the fake data manually if it seems legit. If it seems appropriate, stop training, else go to step 3. This is a bit of a manual task, as hand evaluating the data is the best way to check the fakeness. When this step is over, you can evaluate whether the GAN is performing well enough.
 
-Now just take a breath and look at what kind of implications this technique could have. If hypothetically you had a fully functional generator, you can duplicate almost anything. To give you examples, you can generate fake news; create books and novels with unimaginable stories; on call support and much more. You can have artificial intelligence as close to reality; a true artificial  intelligence! That’s the dream!!
-
- 
