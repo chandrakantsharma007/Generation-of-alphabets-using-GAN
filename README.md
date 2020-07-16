@@ -33,7 +33,7 @@ D(x) -> Discriminator Network
 
 Now the training of GAN is done (as we saw above) as a fight between generator and discriminator. This can be represented mathematically as
 
-![alt text](https://cdn.analyticsvidhya.com/wp-content/uploads/2017/06/14180916/g22.png)
+ ![alt text](https://cdn.analyticsvidhya.com/wp-content/uploads/2017/06/14180916/g22.png)
 
 In our function V(D, G) the first term is entropy that the data from real distribution (pdata(x)) passes through the discriminator (aka best case scenario). The discriminator tries to maximize this to 1. The second term is entropy that the data from random input (p(z)) passes through the generator, which then generates a fake sample which is then passed through the discriminator to identify the fakeness (aka worst case scenario). In this term, discriminator tries to maximize it to 0 (i.e. the log probability that the data from generated is fake is equal to 0). So overall, the discriminator is trying to maximize our function V.
 
@@ -46,10 +46,14 @@ So broadly a training phase has two main subparts and they are done sequentially
 
 
 Pass 1: Train discriminator and freeze generator (freezing means setting training as false. The network does only forward pass and no backpropagation is applied)
-![alt text](https://cdn.analyticsvidhya.com/wp-content/uploads/2017/06/14204626/s21.png)
+
+![alt text](https://cdn.analyticsvidhya.com/wp-content/uploads/2017/06/14204616/s1.jpg)
 
 Pass 2: Train generator and freeze discriminator
-![alt text](https://cdn.analyticsvidhya.com/wp-content/uploads/2017/06/14180916/g22.png)
+
+![alt text](https://cdn.analyticsvidhya.com/wp-content/uploads/2017/06/14204626/s21.png)
+
+
 Steps to train a GAN
 Step 1: Define the problem. Do you want to generate fake images or fake text. Here you should completely define the problem and collect data for it.
 
